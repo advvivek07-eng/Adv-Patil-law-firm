@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patil Law Firm & Legal Advisors | Advocate Vivek D. Patil</title>
+<meta name="description" content="Patil Law Firm and Legal Advisors, Pune. Legal consultation, property law, RERA, civil, criminal, family, consumer and cooperative society matters.">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#222;background:#f7f5ef;line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{background:#111;color:#fff;position:sticky;top:0;z-index:1000;border-bottom:2px solid #c79a3b}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:58px;height:58px;object-fit:contain;background:#fff;border-radius:50%;padding:3px}
+.brand strong{font-family:Georgia,serif;font-size:20px}
+.brand small{display:block;color:#d9b45b}
+nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav a{font-size:13px;font-weight:bold;color:#eee}
+nav a:hover{color:#d9b45b}
+.hero{background:linear-gradient(135deg,#111,#292929);color:#fff;padding:85px 0}
+.hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:45px;align-items:center}
+.hero h1{font-family:Georgia,serif;font-size:52px;line-height:1.12;margin:0 0 14px}
+.gold{color:#d7ae55}
+.hero p{font-size:18px;color:#ddd;max-width:720px}
+.qualifications{font-weight:bold;color:#e1c47e;letter-spacing:.4px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 19px;border-radius:5px;font-weight:bold;border:1px solid #d1a74d;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px #0005}
+.btn-gold{background:#c99b3b;color:#111}
+.btn-dark{background:transparent;color:#fff}
+.btn-youtube{background:#e62117;border-color:#e62117;color:#fff}
+.hero-card{background:#fff;color:#222;padding:28px;border-top:5px solid #c99b3b;box-shadow:0 15px 40px #0005}
+.hero-card h3{font-family:Georgia,serif;margin-top:0;font-size:25px}
+.hero-card p{color:#555;font-size:15px}
+section{padding:72px 0}
+.section-title{text-align:center;margin-bottom:42px}
+.section-title h2{font-family:Georgia,serif;font-size:40px;margin:0 0 8px}
+.section-title p{color:#666;max-width:760px;margin:auto}
+.under{display:block;width:50px;height:3px;background:#c99b3b;margin:16px auto}
+.services{background:#171717;color:#fff}
+.services .section-title p{color:#ccc}
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.service{background:#222;border:1px solid #3a3a3a;padding:28px;min-height:100%;border-top:3px solid #c99b3b}
+.service h3{font-family:Georgia,serif;font-size:25px;color:#e1bb68;margin-top:0}
+.service p{color:#ccc}
+.service ul{padding-left:20px;color:#ddd}
+.service li{margin:6px 0}
+.service-link{display:inline-block;color:#e1bb68;font-weight:bold;margin-top:8px}
+.service-link:hover{color:#fff}
+.service-note{margin-top:28px;padding:20px;background:#202020;border-left:4px solid #c99b3b;color:#ccc}
+.service-note strong{color:#e1bb68}
+.info-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.info-card,.contact-card,.inquiry{background:#fff;padding:30px;border:1px solid #ddd;box-shadow:0 8px 25px #0000000c}
+.info-card h3,.contact-card h3,.inquiry h3{font-family:Georgia,serif;font-size:27px;margin-top:0}
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.topic{padding:12px;border-bottom:1px solid #eee;font-weight:bold}
+.youtube-card{background:#111;color:#fff;padding:30px;border-top:5px solid #c99b3b}
+.youtube-card h3{font-family:Georgia,serif;font-size:30px}
+.youtube-card p{color:#ccc}
+.yt-btn{display:inline-block;background:#e62117;color:#fff;padding:12px 18px;border-radius:5px;font-weight:bold}
+.contact{background:#eeeae0}
+.contact-card a{color:#8a681f;font-weight:bold}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+input,textarea,select{width:100%;padding:13px;border:1px solid #ccc;border-radius:4px;font:inherit;margin-bottom:12px}
+textarea{min-height:120px;resize:vertical}
+footer{background:#111;color:#bbb;padding:35px 0;text-align:center}
+footer strong{color:#fff}
+.map{width:100%;height:300px;border:0;margin-top:20px}
+
+@keyframes headingLeftRight{from{opacity:0;transform:translateX(-45px)}to{opacity:1;transform:translateX(0)}}
+.service h3.reveal{opacity:0;transform:translateX(-45px)}
+.service h3.reveal.visible{animation:headingLeftRight .7s ease forwards}
+
+@media(max-width:850px){
+ nav{display:none}
+ .hero-grid,.info-grid,.contact-grid,.service-grid{grid-template-columns:1fr}
+ .hero h1{font-size:39px}
+ .topics,.form-row{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .service h3.reveal,.service h3.reveal.visible{opacity:1;transform:none;animation:none}
+}
+
+/* ===== Professional website effects ===== */
+body{overflow-x:hidden}
+header{transition:transform .35s ease,box-shadow .35s ease}
+header.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.28)}
+.hero{position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(2px)}
+.hero:before{width:420px;height:420px;right:-160px;top:-160px;background:radial-gradient(circle,rgba(215,174,85,.20),transparent 68%);animation:floatGlow 7s ease-in-out infinite}
+.hero:after{width:330px;height:330px;left:-170px;bottom:-180px;background:radial-gradient(circle,rgba(255,255,255,.09),transparent 70%);animation:floatGlow 9s ease-in-out infinite reverse}
+.hero-grid,.section-title,.service-grid,.info-grid,.contact-grid,.inquiry{position:relative;z-index:1}
+.hero h1{animation:heroTitle .9s ease both}
+.hero p,.hero .actions,.hero-card{animation:heroFade .9s ease .15s both}
+.hero-card{transition:transform .35s ease,box-shadow .35s ease}
+.hero-card:hover{transform:translateY(-8px) rotateX(1deg);box-shadow:0 22px 50px rgba(0,0,0,.35)}
+.btn{position:relative;overflow:hidden}
+.btn:after{content:"";position:absolute;top:0;left:-120%;width:70%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.25),transparent);transform:skewX(-20deg);transition:left .6s ease}
+.btn:hover:after{left:140%}
+.service{position:relative;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.service:before{content:"";position:absolute;left:0;top:0;width:4px;height:0;background:#e1bb68;transition:height .45s ease}
+.service:hover{transform:translateY(-7px);box-shadow:0 16px 32px rgba(0,0,0,.35);border-color:#c99b3b}
+.service:hover:before{height:100%}
+.service-link{transition:padding-left .25s ease}
+.service:hover .service-link{padding-left:7px}
+.section-title h2{position:relative;display:inline-block}
+.section-title h2:after{content:"";display:block;width:0;height:3px;background:#c99b3b;margin:9px auto 0;transition:width .7s ease}
+.section-title.visible h2:after{width:65px}
+.info-card,.contact-card,.inquiry,.youtube-card{transition:transform .35s ease,box-shadow .35s ease}
+.info-card:hover,.contact-card:hover,.inquiry:hover,.youtube-card:hover{transform:translateY(-5px);box-shadow:0 16px 35px rgba(0,0,0,.14)}
+.topic{transition:background .25s ease,padding-left .25s ease}
+.topic:hover{background:#f2ecdf;padding-left:18px}
+.reveal-up{opacity:0;transform:translateY(35px);transition:opacity .75s ease,transform .75s ease}
+.reveal-up.visible{opacity:1;transform:none}
+.service h3.reveal{opacity:0;transform:translateX(-45px)}
+.service h3.reveal.visible{animation:headingLeftRight .7s ease forwards}
+.floating-actions{position:fixed;right:22px;bottom:22px;z-index:1200;display:flex;flex-direction:column;gap:10px}
+.float-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;box-shadow:0 8px 22px rgba(0,0,0,.3);transition:transform .25s ease}
+.float-btn:hover{transform:scale(1.1)}
+.float-call{background:#151515}
+.float-wa{background:#18b957}
+.scroll-top{opacity:0;pointer-events:none;background:#c99b3b;color:#111}
+.scroll-top.show{opacity:1;pointer-events:auto}
+@keyframes heroTitle{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+@keyframes heroFade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes floatGlow{50%{transform:translate3d(0,18px,0) scale(1.05)}}
+@media(max-width:850px){.floating-actions{right:14px;bottom:14px}.float-btn{width:50px;height:50px}}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .reveal-up,.service h3.reveal{opacity:1!important;transform:none!important}
+}
+
+
+/* ===== Requested final visual update ===== */
+/* Lady Justice / Judiciary background on the home hero */
+.hero{
+  background:
+    linear-gradient(90deg,rgba(5,5,5,.94) 0%,rgba(8,8,8,.84) 42%,rgba(8,8,8,.52) 100%),
+    url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Lady%20Justice.JPG") center 35%/cover no-repeat;
+  background-attachment:scroll;
+  min-height:620px;
+}
+.hero:before{background:radial-gradient(circle,rgba(215,174,85,.13),transparent 68%)}
+.hero:after{background:radial-gradient(circle,rgba(255,255,255,.06),transparent 70%)}
+
+/* Remove left-to-right movement from service subheadings */
+.service h3.reveal,
+.service h3.reveal.visible{
+  opacity:1;
+  transform:none;
+  animation:none !important;
+}
+
+/* Animate ONLY the bullet points under each service heading: left -> right */
+.service ul li{
+  opacity:0;
+  transform:translateX(-35px);
+}
+.service ul li.bullet-visible{
+  animation:bulletLeftRight .55s ease forwards;
+}
+@keyframes bulletLeftRight{
+  from{opacity:0;transform:translateX(-35px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@media(prefers-reduced-motion:reduce){
+  .service ul li,
+  .service ul li.bullet-visible{
+    opacity:1;
+    transform:none;
+    animation:none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="container nav">
+<div class="brand">
+<img class="logo" src="logo.jpg" alt="Patil Law Firm logo">
+<div><strong>Patil Law Firm & Legal Advisors</strong><small>Adv. Vivek D. Patil</small></div>
+</div>
+<nav>
+<a href="#home">HOME</a>
+<a href="#services">LEGAL SERVICES</a>
+<a href="#legal-info">LAW INFO</a>
+<a href="#contact">CONTACT</a>
+<a href="#inquiry">INQUIRY</a>
+</nav>
+</div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<p class="gold"><strong>ADVOCATE • LEGAL CONSULTANT • LEGAL ADVISOR</strong></p>
+<h1>Professional Legal Services in <span class="gold">Pune</span></h1>
+<p class="qualifications">Adv. Vivek D. Patil, B.A. LL.B., B.Sc., M.C.A.</p>
+<p>Professional legal consultation, documentation, drafting and representation for individuals, families, property owners, homebuyers, societies and businesses.</p>
+<div class="actions">
+<a class="btn btn-gold" href="tel:9028656394">CALL NOW</a>
+<a class="btn btn-dark" href="https://wa.me/919028656394" target="_blank">WHATSAPP</a>
+<a class="btn btn-dark" href="#inquiry">BOOK CONSULTATION</a>
+<a class="btn btn-youtube" href="https://www.youtube.com/channel/UC7m-6L1oSDyjhP0j-VutURQ" target="_blank">▶ LAW INFO ON YOUTUBE</a>
+</div>
+</div>
+<div class="hero-card">
+<h3>Need Legal Assistance?</h3>
+<p>Send your enquiry with a brief description of your matter. We can discuss the appropriate legal service, documents and next steps.</p>
+<a class="btn btn-gold" href="#inquiry">SEND ENQUIRY</a>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="section-title">
+<h2>Legal Services</h2>
+<p>Detailed legal assistance, documentation, consultation and representation.</p>
+<span class="under"></span>
+</div>
+<div class="service-grid">
+
+<div class="service"><h3>Property Documentation</h3><p>Assistance in preparing, reviewing and vetting property documents and transactions.</p><ul><li>Agreement to Sale / Sale Agreement</li><li>Sale Deed, Gift Deed & Release Deed</li><li>Assignment & Rectification Deeds</li><li>MOU and property agreements</li><li>Leave & License / Rent Agreements</li><li>Title Search & Due Diligence</li><li>7/12 Extract & Index-II review</li><li>Property legal opinions</li></ul><a class="service-link" href="#inquiry">Discuss Property Matter →</a></div>
+
+<div class="service"><h3>RERA & Builder Disputes</h3><p>Legal assistance for homebuyers, flat purchasers and property owners.</p><ul><li>Delayed possession</li><li>Promised amenities not provided</li><li>Leakage and construction defects</li><li>Parking and possession disputes</li><li>RERA complaints and replies</li><li>Execution / compliance of orders</li><li>Builder-buyer agreement review</li><li>Homebuyer legal notices</li></ul><a class="service-link" href="#inquiry">Discuss RERA Matter →</a></div>
+
+<div class="service"><h3>Legal Notices</h3><p>Professional drafting and review of legal notices and replies.</p><ul><li>Demand and recovery notices</li><li>Breach of contract notices</li><li>Property dispute notices</li><li>Builder / developer notices</li><li>Banking and loan notices</li><li>Society and maintenance notices</li><li>Consumer notices</li><li>Replies to legal notices</li></ul><a class="service-link" href="#inquiry">Request Legal Notice →</a></div>
+
+<div class="service"><h3>Civil Litigation & Recovery</h3><p>Assistance in civil disputes, recovery matters and contractual claims.</p><ul><li>Money recovery disputes</li><li>Injunction and declaration matters</li><li>Property and possession disputes</li><li>Breach of agreement disputes</li><li>Recovery proceedings</li><li>Arbitration-related assistance</li><li>Drafting of pleadings and applications</li><li>Case strategy and consultation</li></ul><a class="service-link" href="#inquiry">Discuss Civil Matter →</a></div>
+
+<div class="service"><h3>Family & Matrimonial Matters</h3><p>Confidential assistance in family and matrimonial disputes.</p><ul><li>Divorce proceedings</li><li>Maintenance matters</li><li>Child custody and visitation</li><li>Domestic dispute-related assistance</li><li>Matrimonial legal notices</li><li>Mutual consent divorce documentation</li><li>Family settlement documents</li><li>Legal consultation and representation</li></ul><a class="service-link" href="#inquiry">Discuss Family Matter →</a></div>
+
+<div class="service"><h3>Co-operative Society Matters</h3><p>Legal assistance for housing societies, members, owners and occupants.</p><ul><li>Maintenance recovery disputes</li><li>Society NOC and transfer matters</li><li>Member rights and obligations</li><li>Parking-related disputes</li><li>Society notices and correspondence</li><li>Recovery certificate assistance</li><li>Society record disputes</li><li>Legal opinions</li></ul><a class="service-link" href="#inquiry">Discuss Society Matter →</a></div>
+
+<div class="service"><h3>Banking, Loans & Recovery</h3><p>Consultation and documentation concerning loans, recovery and banking disputes.</p><ul><li>Loan and repayment disputes</li><li>Recovery notices and replies</li><li>Banking service disputes</li><li>Cheque and payment matters</li><li>Arbitration notices and replies</li><li>Settlement and representation</li><li>Consumer complaints involving banks</li><li>Loan document review</li></ul><a class="service-link" href="#inquiry">Discuss Banking Matter →</a></div>
+
+<div class="service"><h3>Consumer Court Matters</h3><p>Assistance concerning deficient services, defective goods and consumer disputes.</p><ul><li>Consumer complaint drafting</li><li>Deficiency in service</li><li>Defective product/service</li><li>Builder and housing disputes</li><li>Banking service complaints</li><li>Legal notices</li><li>Evidence preparation</li><li>Consultation and representation</li></ul><a class="service-link" href="#inquiry">Discuss Consumer Matter →</a></div>
+
+<div class="service"><h3>Criminal Law Matters</h3><p>Legal consultation and assistance in criminal complaints and related proceedings.</p><ul><li>Police complaints and representations</li><li>FIR-related consultation</li><li>Bail-related legal assistance</li><li>Criminal complaint drafting</li><li>Replies to allegations and notices</li><li>Cyber / online complaint assistance</li><li>Victim and accused-side consultation</li><li>Case documentation and strategy</li></ul><a class="service-link" href="#inquiry">Discuss Criminal Matter →</a></div>
+
+<div class="service"><h3>Legal Drafting & Documentation</h3><p>Customized drafting, vetting and revision of legal documents.</p><ul><li>Affidavits and declarations</li><li>Indemnity bonds and undertakings</li><li>Power of Attorney</li><li>Agreements and MOUs</li><li>Legal opinions and representations</li><li>Applications to authorities</li><li>Replies, notices and correspondence</li><li>Document review and correction</li></ul><a class="service-link" href="#inquiry">Request Drafting →</a></div>
+
+</div>
+<div class="service-note"><strong>Important:</strong> Every matter is different. Initial consultation helps identify the applicable law, documents, available remedies, forum and practical next steps. Fees and scope are discussed separately based on the nature and complexity of the matter.</div>
+</div>
+</section>
+
+<section id="legal-info">
+<div class="container">
+<div class="section-title">
+<h2>Law Information</h2>
+<p>Practical legal information and awareness by Adv. Vivek D. Patil.</p>
+<span class="under"></span>
+</div>
+<div class="info-grid">
+<div class="info-card reveal-up">
+<h3>Legal Information Topics</h3>
+<div class="topics">
+<div class="topic">Property Law & Documents</div>
+<div class="topic">RERA & Homebuyer Rights</div>
+<div class="topic">Family & Matrimonial Law</div>
+<div class="topic">Civil & Criminal Law</div>
+<div class="topic">Co-operative Society Law</div>
+<div class="topic">Banking & Consumer Law</div>
+<div class="topic">Legal Notices</div>
+<div class="topic">General Legal Awareness</div>
+</div>
+<p style="font-size:13px;color:#777;margin-top:20px">Information is provided for general educational purposes and is not a substitute for case-specific legal advice.</p>
+</div>
+<div class="youtube-card reveal-up">
+<h3>▶ Law Info on YouTube</h3>
+<p>Watch legal information and awareness videos from Adv. Vivek D. Patil.</p>
+<p><strong>Channel ID:</strong> UC7m-6L1oSDyjhP0j-VutURQ</p>
+<a class="yt-btn" href="https://www.youtube.com/channel/UC7m-6L1oSDyjhP0j-VutURQ" target="_blank">WATCH YOUTUBE CHANNEL</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-title">
+<h2>Contact Patil Law Firm</h2>
+<p>Contact us for a consultation or legal enquiry.</p>
+<span class="under"></span>
+</div>
+<div class="contact-grid">
+<div class="contact-card reveal-up">
+<h3>Contact Details</h3>
+<p><strong>Adv. Vivek D. Patil</strong><br>B.A. LL.B., B.Sc., M.C.A.</p>
+<p>📞 <a href="tel:9028656394">9028656394</a></p>
+<p>💬 <a href="https://wa.me/919028656394" target="_blank">WhatsApp Enquiry</a></p>
+<p>✉️ <a href="mailto:advvivek07@gmail.com">advvivek07@gmail.com</a></p>
+<p>📍 Patil Law Firm & Legal Advisors<br>Majestique Manhattan Commercial Complex, Wagholi, Pune.</p>
+<a class="btn btn-gold" href="https://www.google.com/maps/place/Patil+law+Firm/@18.5872872,73.9883093,17z" target="_blank">OPEN GOOGLE MAPS</a>
+</div>
+<div class="contact-card">
+<h3>Office Location</h3>
+<iframe class="map" src="https://www.google.com/maps?q=18.5872872,73.9883093&output=embed" loading="lazy"></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<section id="inquiry">
+<div class="container">
+<div class="section-title">
+<h2>Legal Enquiry / Consultation</h2>
+<p>Submit your basic details and we will use the information to contact you.</p>
+<span class="under"></span>
+</div>
+<div class="inquiry reveal-up">
+<form action="mailto:advvivek07@gmail.com" method="post" enctype="text/plain">
+<div class="form-row">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+</div>
+<div class="form-row">
+<input type="email" name="Email" placeholder="Email Address">
+<select name="Service">
+<option value="">Select Legal Service</option>
+<option>Property Documentation</option>
+<option>RERA & Builder Dispute</option>
+<option>Legal Notice</option>
+<option>Civil Litigation & Recovery</option>
+<option>Family & Matrimonial</option>
+<option>Co-operative Society</option>
+<option>Banking / Loan / Recovery</option>
+<option>Consumer Court</option>
+<option>Criminal Law</option>
+<option>Legal Drafting</option>
+<option>Other</option>
+</select>
+</div>
+<textarea name="Message" placeholder="Briefly describe your legal matter"></textarea>
+<button class="btn btn-gold" type="submit">SEND ENQUIRY BY EMAIL</button>
+<a class="btn btn-youtube" href="https://wa.me/919028656394" target="_blank">SEND VIA WHATSAPP</a>
+</form>
+</div>
+</div>
+</section>
+
+</main>
+
+
+<div class="floating-actions" aria-label="Quick contact">
+  <a class="float-btn float-call" href="tel:9028656394" aria-label="Call 9028656394">☎</a>
+  <a class="float-btn float-wa" href="https://wa.me/919028656394" target="_blank" aria-label="WhatsApp">W</a>
+  <a class="float-btn scroll-top" id="scrollTop" href="#home" aria-label="Back to top">↑</a>
+</div>
+
+<footer>
+<div class="container">
+<p><strong>Patil Law Firm & Legal Advisors</strong></p>
+<p>Adv. Vivek D. Patil, B.A. LL.B., B.Sc., M.C.A.</p>
+<p>Phone: 9028656394 · Email: advvivek07@gmail.com</p>
+<p><a href="https://www.youtube.com/channel/UC7m-6L1oSDyjhP0j-VutURQ" target="_blank">▶ Law Info YouTube Channel</a></p>
+<p style="font-size:12px">Legal information on this website is for general educational purposes and does not constitute legal advice.</p>
+</div>
+</footer>
+
+<script>
+(function(){
+  const bullets=document.querySelectorAll('.service ul li');
+  const reveals=document.querySelectorAll('.reveal-up');
+  const titles=document.querySelectorAll('.section-title');
+  const header=document.querySelector('header');
+  const top=document.getElementById('scrollTop');
+
+  const observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        const items=entry.target.querySelectorAll
+          ? entry.target.querySelectorAll('.service ul li')
+          : [];
+        if(entry.target.matches && entry.target.matches('.service')){
+          /* One bullet at a time: each waits for the previous bullet's animation. */
+          items.forEach(function(li,i){
+            setTimeout(function(){
+              li.classList.add('bullet-visible');
+            }, i * 650);
+          });
+        }else{
+          entry.target.classList.add('visible');
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+
+  document.querySelectorAll('.service').forEach(function(card){
+    observer.observe(card);
+  });
+  reveals.forEach(function(el){observer.observe(el);});
+  titles.forEach(function(el){observer.observe(el);});
+
+  window.addEventListener('scroll',function(){
+    header.classList.toggle('scrolled',window.scrollY>20);
+    if(top) top.classList.toggle('show',window.scrollY>500);
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
